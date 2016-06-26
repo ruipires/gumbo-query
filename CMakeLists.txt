@@ -1,8 +1,12 @@
 project(gumbo_query CXX)
 cmake_minimum_required(VERSION 3.2 FATAL_ERROR)
 
+################################################################################
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup()
+################################################################################
+
 include(CTest)
-include(cmake/PreventInSourceBuilds.cmake)
 
 # Debug build.
 set(CMAKE_VERBOSE_MAKEFILE ON)
